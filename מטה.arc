@@ -1,5 +1,23 @@
-מטה.arc ה״ב
+;מטה.arc ה״ב
 
-(def השליכהו)
+"דצ״ך עד״ש באח״ב"
 
-  	
+;(def השליכהו)
+;(def תחזיק)
+
+
+;(def throw)
+;(def grab)
+;(def mateh)
+
+
+
+(def מטה ()
+	(disp "\n מטה ")
+	(= bitoy (tokens (readline)))
+
+    (sicha bitoy))
+
+(def sicha (bitoy)
+
+(מטה)
