@@ -6,12 +6,24 @@
 	(pr "|מ\n|ט\n|ה")
 	(מטה))
 
-;(def השליכהו)
+(def השליכהו ((o פסוק))
+	(if פסוק
+			(do (disp (+ "\nמטה<~~ " פסוק "\n"))
+			(readline)
+			(השליכהו פסוק))
+	    (פה)))
+
+
 ;(def תחזיק)
 
 
 ;(def harem)
-;(def throw)
+(def throw ((o pasuk))
+	(if pasuk
+			(do (disp (+ "מטה<~~ " pasuk "\n"))
+			(readline)
+			(throw pasuk))
+	    (peh)))
 ;(def grab)
 ;(def mateh)
 
@@ -30,18 +42,23 @@
 		
 		"הרם" (הרם)
 
-		"השליכהו" (השליכהו)
+		"השליכהו" (השליכהו (cdr פסוק))
 		"תחזיק" (תחזיק)
 		"op->hex" (op->hex)
 		
 		"harem" (harem)
-		"throw" (throw)
+		"throw" (throw (cdr פסוק))
 		"grab"  (grab)
 		
 		(prn "pekudah not found") (מטה)))
 
-;(def פה)
-;(def peh)
+(def פה ((o kelet))
+	(disp "\nמטה<~")
+	(פה)) 
+	    
+(def peh ((o kelet))
+  (disp "\nמטה<~")
+  (peh))
 
 
 (def yad (pasuk)
